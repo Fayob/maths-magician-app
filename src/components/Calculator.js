@@ -1,15 +1,6 @@
 import React, { Component } from 'react';
+import Item from './Items';
 import './Calculator.css';
-
-const Item = (props) => {
-  // eslint-disable-next-line react/prop-types
-  const { value, className } = props;
-  return (
-    <div className={className}>
-      { value }
-    </div>
-  );
-};
 
 class Calculator extends Component {
   constructor() {

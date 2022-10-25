@@ -1,0 +1,127 @@
+.header {
+  grid-area: header;
+  text-align: end;
+  color: white;
+  padding-right: 0.5rem;
+  font-size: 30px;
+  justify-self: flex-end;
+}
+
+.AC {
+  grid-area: AC;
+  background: lightgray;
+}
+
+.addSub {
+  grid-area: addSub;
+  background: lightgray;
+}
+
+.percent {
+  grid-area: percent;
+  background: lightgray;
+}
+
+.divide {
+  grid-area: divide;
+  background: #ff9411;
+}
+
+.seven {
+  grid-area: seven;
+  background: lightgray;
+}
+
+.eight {
+  grid-area: eight;
+  background: lightgray;
+}
+
+.nine {
+  grid-area: nine;
+  background: lightgray;
+}
+
+.multiply {
+  grid-area: multiply;
+  background: #ff9411;
+}
+
+.four {
+  grid-area: four;
+  background: lightgray;
+}
+
+.five {
+  grid-area: five;
+  background: lightgray;
+}
+
+.six {
+  grid-area: six;
+  background: lightgray;
+}
+
+.minus {
+  grid-area: minus;
+  background: #ff9411;
+}
+
+.one {
+  grid-area: one;
+  background: lightgray;
+}
+
+.two {
+  grid-area: two;
+  background: lightgray;
+}
+
+.three {
+  grid-area: three;
+  background: lightgray;
+}
+
+.plus {
+  grid-area: plus;
+  background: #ff9411;
+}
+
+.zero {
+  grid-area: zero;
+  background: lightgray;
+}
+
+.dot {
+  grid-area: dot;
+  background: lightgray;
+}
+
+.equal {
+  grid-area: equal;
+  background: #ff9411;
+}
+
+.container {
+  width: 50vw;
+  height: 60vh;
+  display: grid;
+  margin: 150px auto;
+  text-align: center;
+  grid-template-areas:
+    "header header header header"
+    "AC addSub percent divide"
+    "seven eight nine multiply"
+    "four five six minus"
+    "one two three plus"
+    "zero zero dot equal";
+  grid-gap: 0.15rem;
+  background: darkgray;
+  position: relative;
+}
+
+.container > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

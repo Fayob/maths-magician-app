@@ -1,12 +1,16 @@
 import React from 'react';
 
-// eslint-disable-next-line react/prefer-stateless-function
 class Item extends React.Component {
+  constructor() {
+    super();
+    this.state = {};
+  }
+
   render() {
     // eslint-disable-next-line react/prop-types
-    const { value, className } = this.props;
+    const { value, className, onClickHandler } = this.props;
     return (
-      <div className={className}>
+      <div className={className} onClickCapture={onClickHandler}>
         { value }
       </div>
     );

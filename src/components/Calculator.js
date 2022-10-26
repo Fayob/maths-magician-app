@@ -1,37 +1,51 @@
+/* eslint-disable no-unused-vars */
 import React, { Component } from 'react';
 import Item from './Items';
+import calculate from './logic/calculate';
+
 import './Calculator.css';
 
 class Calculator extends Component {
   constructor() {
     super();
     this.state = {
+      total: 0,
+      next: null,
+      operation: null,
     };
   }
 
   render() {
+    const clickHandler = (event) => {
+      const text = event.target.textContent;
+      const newState = calculate(this.state, text);
+      this.setState({ ...newState });
+    };
+
+    const { total, next } = this.state;
+
     return (
       <div className="container">
-        <Item value="0" className="header" />
-        <Item value="AC" className="AC" />
-        <Item value="+/-" className="addSub" />
-        <Item value="%" className="percent" />
-        <Item value="/" className="divide" />
-        <Item value="x" className="multiply" />
-        <Item value="-" className="minus" />
-        <Item value="+" className="plus" />
-        <Item value="=" className="equal" />
-        <Item value="1" className="one" />
-        <Item value="2" className="two" />
-        <Item value="3" className="three" />
-        <Item value="4" className="four" />
-        <Item value="5" className="five" />
-        <Item value="6" className="six" />
-        <Item value="7" className="seven" />
-        <Item value="8" className="eight" />
-        <Item value="9" className="nine" />
-        <Item value="0" className="zero" />
-        <Item value="." className="dot" />
+        <Item value={next !== null ? next : total} className="header" />
+        <Item value="AC" className="AC" onClickHandler={clickHandler} />
+        <Item value="+/-" className="addSub" onClickHandler={clickHandler} />
+        <Item value="%" className="percent" onClickHandler={clickHandler} />
+        <Item value="÷" className="divide" onClickHandler={clickHandler} />
+        <Item value="x" className="multiply" onClickHandler={clickHandler} />
+        <Item value="-" className="minus" onClickHandler={clickHandler} />
+        <Item value="+" className="plus" onClickHandler={clickHandler} />
+        <Item value="=" className="equal" onClickHandler={clickHandler} />
+        <Item value="1" className="one" onClickHandler={clickHandler} />
+        <Item value="2" className="two" onClickHandler={clickHandler} />
+        <Item value="3" className="three" onClickHandler={clickHandler} />
+        <Item value="4" className="four" onClickHandler={clickHandler} />
+        <Item value="5" className="five" onClickHandler={clickHandler} />
+        <Item value="6" className="six" onClickHandler={clickHandler} />
+        <Item value="7" className="seven" onClickHandler={clickHandler} />
+        <Item value="8" className="eight" onClickHandler={clickHandler} />
+        <Item value="9" className="nine" onClickHandler={clickHandler} />
+        <Item value="0" className="zero" onClickHandler={clickHandler} />
+        <Item value="." className="dot" onClickHandler={clickHandler} />
       </div>
     );
   }

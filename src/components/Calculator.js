@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import React, { Component } from 'react';
 import Item from './Items';
 import calculate from './logic/calculate';
@@ -9,7 +8,7 @@ class Calculator extends Component {
   constructor() {
     super();
     this.state = {
-      total: 0,
+      total: '0',
       next: null,
       operation: null,
     };

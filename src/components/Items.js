@@ -1,13 +1,13 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 class Item extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {};
   }
 
   render() {
-    // eslint-disable-next-line react/prop-types
     const { value, className, onClickHandler } = this.props;
     return (
       <div className={className} onClickCapture={onClickHandler}>
@@ -16,5 +16,11 @@ class Item extends React.Component {
     );
   }
 }
+
+Item.propTypes = {
+  value: PropTypes.string.isRequired,
+  className: PropTypes.string.isRequired,
+  onClickHandler: PropTypes.func.isRequired,
+};
 
 export default Item;

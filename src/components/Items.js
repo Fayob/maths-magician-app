@@ -1,21 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-class Item extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
-
-  render() {
-    const { value, className, onClickHandler } = this.props;
-    return (
-      <div className={className} onClickCapture={onClickHandler}>
-        { value }
-      </div>
-    );
-  }
-}
+const Item = ({ value, className, onClickHandler }) => (
+  <div className={className} onClickCapture={onClickHandler}>
+    { value }
+  </div>
+);
 
 Item.propTypes = {
   value: PropTypes.string.isRequired,

@@ -20,27 +20,30 @@ const Calculator = () => {
   const { total, next } = state;
 
   return (
-    <div className="container">
-      <Item value={next !== null ? next : total} className="header" />
-      <Item value="AC" className="AC" onClickHandler={clickHandler} />
-      <Item value="+/-" className="addSub" onClickHandler={clickHandler} />
-      <Item value="%" className="percent" onClickHandler={clickHandler} />
-      <Item value="÷" className="divide" onClickHandler={clickHandler} />
-      <Item value="x" className="multiply" onClickHandler={clickHandler} />
-      <Item value="-" className="minus" onClickHandler={clickHandler} />
-      <Item value="+" className="plus" onClickHandler={clickHandler} />
-      <Item value="=" className="equal" onClickHandler={clickHandler} />
-      <Item value="1" className="one" onClickHandler={clickHandler} />
-      <Item value="2" className="two" onClickHandler={clickHandler} />
-      <Item value="3" className="three" onClickHandler={clickHandler} />
-      <Item value="4" className="four" onClickHandler={clickHandler} />
-      <Item value="5" className="five" onClickHandler={clickHandler} />
-      <Item value="6" className="six" onClickHandler={clickHandler} />
-      <Item value="7" className="seven" onClickHandler={clickHandler} />
-      <Item value="8" className="eight" onClickHandler={clickHandler} />
-      <Item value="9" className="nine" onClickHandler={clickHandler} />
-      <Item value="0" className="zero" onClickHandler={clickHandler} />
-      <Item value="." className="dot" onClickHandler={clickHandler} />
+    <div className="calculator">
+      <h4>Let`s do some math!</h4>
+      <div className="container">
+        <Item value={next !== null ? next : total} className="header" />
+        <Item value="AC" className="AC" onClickHandler={clickHandler} />
+        <Item value="+/-" className="addSub" onClickHandler={clickHandler} />
+        <Item value="%" className="percent" onClickHandler={clickHandler} />
+        <Item value="÷" className="divide" onClickHandler={clickHandler} />
+        <Item value="x" className="multiply" onClickHandler={clickHandler} />
+        <Item value="-" className="minus" onClickHandler={clickHandler} />
+        <Item value="+" className="plus" onClickHandler={clickHandler} />
+        <Item value="=" className="equal" onClickHandler={clickHandler} />
+        <Item value="1" className="one" onClickHandler={clickHandler} />
+        <Item value="2" className="two" onClickHandler={clickHandler} />
+        <Item value="3" className="three" onClickHandler={clickHandler} />
+        <Item value="4" className="four" onClickHandler={clickHandler} />
+        <Item value="5" className="five" onClickHandler={clickHandler} />
+        <Item value="6" className="six" onClickHandler={clickHandler} />
+        <Item value="7" className="seven" onClickHandler={clickHandler} />
+        <Item value="8" className="eight" onClickHandler={clickHandler} />
+        <Item value="9" className="nine" onClickHandler={clickHandler} />
+        <Item value="0" className="zero" onClickHandler={clickHandler} />
+        <Item value="." className="dot" onClickHandler={clickHandler} />
+      </div>
     </div>
   );
 };

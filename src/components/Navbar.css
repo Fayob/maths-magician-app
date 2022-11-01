@@ -1,0 +1,28 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.nav_lists {
+  display: flex;
+  text-decoration: underline;
+  list-style-type: none;
+  gap: 0.5rem;
+}
+
+.nav_list {
+  height: 70%;
+  padding-right: 0.5rem;
+  border-right: 2px solid black;
+}
+
+.link {
+  color: blue;
+  text-decoration: none;
+}
+
+.hidden {
+  border-right: none;
+}

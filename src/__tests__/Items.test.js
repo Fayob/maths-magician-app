@@ -18,7 +18,9 @@ describe('test for Item Component', () => {
 
     fireEvent.click(screen.getByText('AC'));
     fireEvent.click(screen.getByText('AC'));
+    fireEvent.click(screen.getByText('AC'));
+    fireEvent.click(screen.getByText('AC'));
 
-    expect(onClickHandler).toHaveBeenCalledTimes(2);
+    expect(onClickHandler).toHaveBeenCalledTimes(4);
   });
 });

@@ -8,8 +8,4 @@ describe('test for Navbar Component', () => {
   it('should render Navbar Component', () => {
     expect(render(<Navbar />, { wrapper: BrowserRouter })).toMatchSnapshot();
   });
-
-  // it('should simulate user interaction', () => {
-  //   expect()
-  // })
 });

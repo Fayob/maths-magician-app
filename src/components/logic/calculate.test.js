@@ -2,7 +2,6 @@ import calculate from './calculate';
 
 describe('testing calculate function', () => {
   test('should return an object with total', () => {
-    // const result = calculate({ total: '0', next: '5', operation: '+' }, '=');
     expect(calculate({ total: '10', next: '5', operation: '+' }, '=')).toEqual({ total: '15', next: null, operation: null });
     expect(calculate({ total: '10', next: '5', operation: '-' }, '=')).toEqual({ total: '5', next: null, operation: null });
     expect(calculate({ total: '10', next: '5', operation: 'x' }, '=')).toEqual({ total: '50', next: null, operation: null });

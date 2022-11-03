@@ -8,6 +8,10 @@
 
 This project was based on learning React.
 
+## Live Demo
+
+[Checkout the deployed app here](https://math-magician-app-by-fayob.netlify.app/)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
